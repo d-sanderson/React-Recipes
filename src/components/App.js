@@ -13,7 +13,6 @@ class App extends React.Component {
             currentRecipe: null,
         }
 
-        this.onRecipeClick = this.onRecipeClick.bind(this)
     }
 
     componentDidMount() {
@@ -33,13 +32,20 @@ class App extends React.Component {
     }
     render() {
     const { recipes, currentRecipe } = this.state;
-    return( <div>
-    <Header />
-    <main style = {{ display: 'flex' }}>
-    <RecipeList recipes={recipes} onClick={this.onRecipeClick} style={{ flex: 3}}/>
-    <RecipeDetail recipe={currentRecipe} style={{ flex: 5 }} />
-    </main>
-     </div>
+    return (<div>
+                <Header />
+                    <main className="px4 flex">
+                    <RecipeList 
+                    recipes={recipes} 
+                    onClick={this.onRecipeClick} 
+                    style={{ flex: 3}}/>
+    
+                    <RecipeDetail 
+                    className="ml4"
+                    recipe={currentRecipe} 
+                    style={{ flex: 5 }} />
+                    </main>
+            </div>
 )
 
     }
