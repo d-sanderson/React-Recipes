@@ -7,7 +7,7 @@ const RecipeDetail = ({ recipe, style }) => {
     return (
       <p
         style={style}
-        className={`classNames('h3 p2 bg-white italic center'), props.className)`}
+        className={'classNames(\'h3 p2 bg-white italic center\'), props.className)'}
       >
     Please select a recipe to see the detail.
       </p>

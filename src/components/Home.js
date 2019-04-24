@@ -4,7 +4,7 @@ import RecipeList from './RecipeList';
 import RecipeDetail from './RecipeDetail';
 
 
-class App extends React.Component {
+class Home extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,6 @@ class App extends React.Component {
       const { recipes, currentRecipe } = this.state;
       return (
         <div>
-          <Header />
           <main className="px4 flex">
             <RecipeList
               recipes={recipes}
@@ -50,4 +49,4 @@ class App extends React.Component {
       );
     }
 }
-export default App;
+export default Home;
