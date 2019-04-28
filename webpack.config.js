@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: './bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   module: {
@@ -25,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.css/,
-        loader: ['style-loader', 'css-loader', 'postcss-loader']
+        loader: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },

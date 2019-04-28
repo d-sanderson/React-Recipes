@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 const RecipeDetail = ({ recipe, style }) => {
   if (!recipe) {
@@ -44,6 +45,11 @@ const RecipeDetail = ({ recipe, style }) => {
           </li>
         ))}
       </ol>
+      <Link
+        to={`/recipe/${recipe.id}`}
+      >
+        See More
+      </Link>
     </div>
   );
 };
