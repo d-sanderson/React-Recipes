@@ -16,7 +16,7 @@ class Recipe extends Component {
 
     fetch(`${API_URL}/v1/recipes/${id}`)
       .then(res => res.json())
-      .then((recipe) => {
+      .then(recipe => {
         this.setState({ recipe });
       });
   }
@@ -25,7 +25,7 @@ class Recipe extends Component {
     const { recipe } = this.state;
     return (
       <div className="px4">
-        <h1>Recipe</h1>
+        <h2 className="h2">Recipe</h2>
         <RecipeDetail recipe={recipe} />
       </div>
     );

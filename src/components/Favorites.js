@@ -6,10 +6,9 @@ const Favorites = ({ state, favorites, toggleFavorite }) => (
     <h2 className="h2">Favorites</h2>
     <RecipeList
       recipes={state.recipes.filter(r => state.favorites.includes(r.id))}
-      favotire={state.favorites}
+      favorite={state.favorites}
       onFavorited={toggleFavorite}
     />
-
   </div>
 );
 
